@@ -9,10 +9,14 @@ public class main {
         for (int i = 9; i >= 0; i--) {
             head[i] = new DNode(i);
         }
-        SLL list = new SLL(head[0]);
+        DLL list = new DLL(head[0]);
         for (int i = 1; i < 10; i++) {
             list.InsertHead(head[i]);
         }
+        list.Insert(new DNode(10), 11);
+        DNode node = new DNode(11);
+        list.Clear();
+
         list.Print();
     }
 }

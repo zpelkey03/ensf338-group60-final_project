@@ -142,7 +142,7 @@ public class SLL {
         if (head == null) {
             return; // list is empty, nothing to delete
         }
-        if (head == node) {
+        if (head.getData() == node.getData()) {
             head = head.getNext();
             size--;
             if (head == null) {
@@ -154,7 +154,7 @@ public class SLL {
         DNode prev = head;
 
         while (current != null) {
-            if (current == node) {
+            if (current.getData() == node.getData()) {
                 prev.setNext(current.getNext());
                 size--;
                 if (current == tail) {
