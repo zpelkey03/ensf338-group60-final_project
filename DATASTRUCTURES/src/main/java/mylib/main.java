@@ -9,14 +9,14 @@ public class main {
         for (int i = 9; i >= 0; i--) {
             head[i] = new DNode(i);
         }
-        CSLL list = new CSLL(head[0]);
+        CDLL list = new CDLL(head[0]);
         for (int i = 1; i < 10; i++) {
             list.InsertHead(head[i]);
         }
         DNode test = new DNode(5);
         list.InsertTail(test);
         list.DeleteHead();
-        list.Clear();
+     
         list.Print();
     }
 }

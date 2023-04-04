@@ -40,7 +40,6 @@ public class CSLL extends SLL{
         }else{
             node.setNext(head);
             tail.setNext(node);
-            node.setPrev(tail);
             head = node;
         }
         size++;
@@ -55,7 +54,6 @@ public class CSLL extends SLL{
         }else{
             tail.setNext(node);
             node.setNext(head);
-            head.setPrev(node);
             tail = node;
         }
         size++;
@@ -76,8 +74,6 @@ public class CSLL extends SLL{
                 current = current.getNext();
             }
             node.setNext(current.getNext());
-            current.getNext().setPrev(node);
-            node.setPrev(current);
             current.setNext(node);
             size++;
         }
