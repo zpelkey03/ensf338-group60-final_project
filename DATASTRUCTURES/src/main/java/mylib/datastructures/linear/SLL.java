@@ -233,5 +233,9 @@ public class SLL {
         }
     }
 
+    public DNode getHead() {
+        return head;
+    }
+
 
 }

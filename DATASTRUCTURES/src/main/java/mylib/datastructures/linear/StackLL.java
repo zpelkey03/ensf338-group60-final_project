@@ -36,6 +36,15 @@ public class StackLL extends SLL{
     public void Sort(){
     }
 
+    public void Push(DNode node){
+        super.InsertHead(node);
+    }
+
+    public DNode Pop(){
+        DNode node = super.getHead();
+        super.DeleteHead();
+        return node;
+    }
 
 
 }
