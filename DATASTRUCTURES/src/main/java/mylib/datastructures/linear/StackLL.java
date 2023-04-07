@@ -36,15 +36,33 @@ public class StackLL extends SLL{
     public void Sort(){
     }
 
-    public void Push(DNode node){
+    public void push(DNode node){
         super.InsertHead(node);
     }
 
-    public DNode Pop(){
+    public DNode pop(){
         DNode node = super.getHead();
         super.DeleteHead();
         return node;
     }
+
+    public DNode peek(){
+        return super.getHead();
+    }
+
+    public int search(DNode node) {
+        DNode current = super.getHead();
+        int position = 0;
+        while (current != null) {
+            position++;
+            if (current.getData() == node.getData()) {
+                return position;
+            }
+            current = current.getNext();
+        }
+        return -1;
+    }
+
 
 
 }

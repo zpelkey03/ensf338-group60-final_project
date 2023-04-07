@@ -35,14 +35,34 @@ public class QueueLL extends SLL {
     public void Sort(){
     }
 
-    public void Enqueue(DNode node){
+    public void enqueue(DNode node){
         super.InsertTail(node);
     }
 
-    public DNode Dequeue(){
+    public DNode dequeue(){
         DNode node = super.getHead();
         super.DeleteHead();
         return node;
     }
+
+    public DNode peek(){
+        return super.getHead();
+    }
+
+    public int search(DNode node) {
+        DNode current = super.getHead();
+        int position = 0;
+        while (current != null) {
+            position++;
+            if (current.getData() == node.getData()) {
+                return position;
+            }
+            current = current.getNext();
+        }
+        return -1;
+    }
+
+
+
 
 }
