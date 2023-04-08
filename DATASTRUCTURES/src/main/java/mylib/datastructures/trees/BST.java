@@ -1,7 +1,6 @@
 package mylib.datastructures.trees;
 
 import java.util.*;
-
 import mylib.datastructures.nodes.TNode;
 
 public class BST {
